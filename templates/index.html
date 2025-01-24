@@ -26,7 +26,7 @@
         {% if config.extra.links or linked_pages %}
         <nav class="header-links">
             {% for link in config.extra.links %}
-            <a href="{{ link.href }}">{{ link.title }}</a>
+            <a href="{{ get_url(path=link.href) }}">{{ link.title }}</a>
             {% endfor %}
             {% for page in linked_pages %}
             <a href="{{ page.permalink }}">{{ page.title }}</a>
